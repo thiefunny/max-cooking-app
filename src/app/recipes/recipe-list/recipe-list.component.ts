@@ -6,4 +6,4 @@ import { Component } from "@angular/core";
     styleUrls: ["./recipe-list.component.css"]
 })
 
-export class recipeListComponent {}
+export class RecipeListComponent {}
