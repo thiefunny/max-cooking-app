@@ -9,10 +9,10 @@ import {
 })
 export class AppComponent {
 
-  menuReceived:string;
+  menuReceived:string = 'shopping-list'
 
   openMenu(receivedMenu: string) {
-    return this.menuReceived = receivedMenu;
+    this.menuReceived = receivedMenu;
   }
 
 }
