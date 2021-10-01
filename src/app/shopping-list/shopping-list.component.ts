@@ -1,19 +1,21 @@
-import { Component } from "@angular/core";
-import { Ingredients } from "../shared/ingredients.model";
+import { Component, OnInit } from '@angular/core';
+
+import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
-    selector: 'app-shopping-list',
-    templateUrl: "./shopping-list.component.html",
-    styleUrls: ["./shopping-list.component.css"]
+  selector: 'app-shopping-list',
+  templateUrl: './shopping-list.component.html',
+  styleUrls: ['./shopping-list.component.css']
 })
+export class ShoppingListComponent implements OnInit {
+  ingredients: Ingredient[] = [
+    new Ingredient('Apples', 5),
+    new Ingredient('Tomatoes', 10),
+  ];
 
-export class ShoppingListComponent {
+  constructor() { }
 
-    ingredients: Ingredients[] = [
+  ngOnInit() {
+  }
 
-        new Ingredients('apples', 5),
-        new Ingredients('tomatoes', 10),
-
-    ];
-    
 }
