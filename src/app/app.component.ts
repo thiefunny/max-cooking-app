@@ -1,6 +1,4 @@
-import {
-  Component
-} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +6,9 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  loadedFeature = 'shopping-list';
 
-  menuReceived:string = 'shopping-list'
-
-  openMenu(receivedMenu: string) {
-    this.menuReceived = receivedMenu;
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
-
 }
