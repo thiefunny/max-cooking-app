@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ShoppingListService } from './shopping-list.service';
 
 @Component({
@@ -12,5 +11,11 @@ export class ShoppingListComponent implements OnInit {
   constructor(public shoppingListService: ShoppingListService) {}
   ingredients = this.shoppingListService.getIngredients();
 
-  ngOnInit() {}
+  ngOnInit() {
+    //   console.log(this.ingredients)
+
+    this.shoppingListService.ingredientAddedEvent.subscribe((_) => {
+      this.ingredients = this.shoppingListService.getIngredients();
+    });
+  }
 }
